@@ -5,7 +5,7 @@
 <p>
 This is a Swift implementation of a swipeable reveal view for iOS. Currently the
 capabilities are limited, but planned to be expanded into a more robust and
-module based setup.
+modular based setup.
 </p>
 
 <h3>Usage</h3>
