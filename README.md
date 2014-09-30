@@ -12,7 +12,6 @@ module based setup.
 
 <p>
 At a minimum you need to include the following files in your project:<br/>
-<br/>
 <ul>
     <li><i>RearNavigationViewController.swift</i></li>
     <li><i>RearNavControllerDelegate.swift</i></li>
@@ -37,12 +36,12 @@ func loadSettingsView(sender: UIButton){
 </p>
 
 <p>
-<b>AppDelegate.swift</b>
+<b>AppDelegate.swift</b><br/>
 Modifications to the AppDelegate.swift file are also necessary for the reveal
 view to work correctly.
 <br/>
 <br/>
-Add the following to your <i>AppDelegate.swift</i> file in your project:<br/>
+Add the following to your <i>AppDelegate.swift</i> file in your project, setting the <i>let viewController</i> with the instantiation of the view controller you want to be viewed first:<br/>
 <br/>
 <pre>
 self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
