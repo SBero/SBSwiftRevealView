@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  SBSwiftRevealView
+//  RevealView
 //
-//  Created by Stephen Bero on 9/30/14.
+//  Created by Stephen Bero on 9/12/14.
 //  Copyright (c) 2014 qws. All rights reserved.
 //
 
@@ -10,13 +10,25 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+                            
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let viewController = ViewController()
+        let navWidth: CGFloat = 220
+        
+        let rearNavigationViewController = RearNavigationViewController(frontViewCtrl: viewController, navWidth: navWidth); // Instantiate and set to the initial view and how wide the navigation width should be
+        
+        self.window!.rootViewController = rearNavigationViewController;
+
+        self.window!.makeKeyAndVisible()
         return true
+
     }
 
     func applicationWillResignActive(application: UIApplication) {
